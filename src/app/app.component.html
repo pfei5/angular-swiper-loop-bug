@@ -1,0 +1,19 @@
+<ng-container
+  *ngIf="{
+    slides: slides$ | async
+  } as observables"
+>
+  <swiper
+    [config]="swiperConfig"
+    [allowTouchMove]="observables.slides?.length > 1 ? true : false"
+    [loop]="observables.slides?.length > 1 ? true : false"
+    #swiper
+  >
+    <ng-template
+      *ngFor="let slide of observables.slides; trackBy: trackBySlide"
+      swiperSlide
+    >
+      <img [src]="slide" />
+    </ng-template>
+  </swiper>
+</ng-container>

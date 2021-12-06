@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'swiper/css/bundle';
+
+.swiper-pagination {
+  & .swiper-pagination-bullet {
+    background-color: rgb(252, 194, 194)  !important;
+
+    &-active {
+      background-color: purple !important;
+    }
+  }
+}
